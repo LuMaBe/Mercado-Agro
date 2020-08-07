@@ -58,13 +58,29 @@
 			children = (
 				E9CC179924DDCB5E00E11C99 /* AppDelegate.swift */,
 				E9CC179B24DDCB5E00E11C99 /* SceneDelegate.swift */,
-				E9CC179D24DDCB5E00E11C99 /* ViewController.swift */,
-				E9CC179F24DDCB5E00E11C99 /* Main.storyboard */,
+				E9CC17AE24DDD03A00E11C99 /* View */,
+				E9CC17AD24DDCFD700E11C99 /* Controller */,
 				E9CC17A224DDCB5F00E11C99 /* Assets.xcassets */,
 				E9CC17A424DDCB5F00E11C99 /* LaunchScreen.storyboard */,
 				E9CC17A724DDCB5F00E11C99 /* Info.plist */,
 			);
 			path = "Mercado Agro";
+			sourceTree = "<group>";
+		};
+		E9CC17AD24DDCFD700E11C99 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9CC179D24DDCB5E00E11C99 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9CC17AE24DDD03A00E11C99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9CC179F24DDCB5E00E11C99 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
