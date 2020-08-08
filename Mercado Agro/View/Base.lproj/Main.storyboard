@@ -14,13 +14,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-dO-Cya">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="66F-H1-qS4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0P-r2-KPj" userLabel="Parte Superior">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="384.5"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Buscar en Mercado Agro" translatesAutoresizingMaskIntoConstraints="NO" id="dlO-7d-aBj">
+                                                <rect key="frame" x="9" y="0.0" width="396" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </searchBar>
+                                        </subviews>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gM-Ae-bGd" userLabel="Parte Inferior">
+                                        <rect key="frame" x="0.0" y="384.5" width="414" height="384.5"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKS-gk-BY0" userLabel="Pestañas">
+                                        <rect key="frame" x="0.0" y="769" width="414" height="49"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <items>
+                                            <tabBarItem title="Inicio" image="house" catalog="system" id="DAg-gP-WPw"/>
+                                            <tabBarItem title="Favoritos" image="heart" catalog="system" id="EvQ-Nq-ahS"/>
+                                            <tabBarItem title="Mis Ventas" image="bag" catalog="system" id="WLw-XZ-sXi"/>
+                                            <tabBarItem title="Notificaciones" image="bell" catalog="system" id="hIy-Dx-azQ"/>
+                                            <tabBarItem title="Más" image="line.horizontal.3" catalog="system" id="GFO-O5-fBG"/>
+                                        </items>
+                                    </tabBar>
+                                </subviews>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5gM-Ae-bGd" firstAttribute="height" secondItem="v0P-r2-KPj" secondAttribute="height" id="Fur-pF-TQa"/>
+                                    <constraint firstItem="5gM-Ae-bGd" firstAttribute="width" secondItem="v0P-r2-KPj" secondAttribute="width" id="NlD-iq-xWv"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ggr-dO-Cya" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Hk-10-GtF"/>
+                            <constraint firstItem="66F-H1-qS4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9RI-Gs-2eI"/>
+                            <constraint firstItem="66F-H1-qS4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jvi-3r-Kpa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ggr-dO-Cya" secondAttribute="trailing" id="SPl-aa-V0d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="66F-H1-qS4" secondAttribute="bottom" id="cqo-jy-NF3"/>
+                            <constraint firstItem="ggr-dO-Cya" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eDy-e5-1fa"/>
+                            <constraint firstAttribute="bottom" secondItem="ggr-dO-Cya" secondAttribute="bottom" id="iX2-gx-U71"/>
+                            <constraint firstAttribute="trailing" secondItem="66F-H1-qS4" secondAttribute="trailing" id="xht-MX-3dh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="66.5" height="66.5"/>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+    </resources>
 </document>
