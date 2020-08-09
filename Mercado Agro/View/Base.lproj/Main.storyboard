@@ -7,32 +7,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inicio-->
-        <scene sceneID="0MD-xh-RVv">
+        <!--Root View Controller-->
+        <scene sceneID="xlW-Cn-1Fa">
             <objects>
-                <viewController id="yqt-ni-WOU" customClass="InicioViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ko5-pr-P9P">
+                <tableViewController id="gGp-mG-zny" customClass="SearchBarViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="czM-OG-cxg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VWf-gO-7H0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="VWf-gO-7H0" secondAttribute="bottom" id="AVd-bw-1Vk"/>
-                            <constraint firstItem="sVg-dY-fcw" firstAttribute="trailing" secondItem="VWf-gO-7H0" secondAttribute="trailing" id="cwH-dq-ykQ"/>
-                            <constraint firstItem="VWf-gO-7H0" firstAttribute="leading" secondItem="sVg-dY-fcw" secondAttribute="leading" id="hUa-i0-udZ"/>
-                            <constraint firstItem="VWf-gO-7H0" firstAttribute="top" secondItem="ko5-pr-P9P" secondAttribute="top" id="myn-q1-tkM"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="sVg-dY-fcw"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="nIU-TA-0Uo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lYQ-SO-YDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Q89-h9-aip">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q89-h9-aip" id="hAb-Vm-n1a">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gGp-mG-zny" id="siC-6J-vv2"/>
+                            <outlet property="delegate" destination="gGp-mG-zny" id="7Vs-2e-mZT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="dJP-gl-TPU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSh-Wj-sEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2397" y="141"/>
+            <point key="canvasLocation" x="-3203" y="141"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="VGU-g2-ZcL">
+            <objects>
+                <navigationController id="DE1-vQ-iKY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="ngL-7u-mS9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VYF-5j-hdX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gGp-mG-zny" kind="relationship" relationship="rootViewController" id="DCf-zF-D0q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ZJ-4C-jYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4288" y="141"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="nyT-Ad-phs">
@@ -149,10 +168,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2we-LI-NWZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="yqt-ni-WOU" kind="relationship" relationship="viewControllers" id="zcy-2Y-suu"/>
+                        <segue destination="DE1-vQ-iKY" kind="relationship" relationship="viewControllers" id="hHD-on-k9L"/>
                         <segue destination="LWA-hs-HXo" kind="relationship" relationship="viewControllers" id="pfb-Xy-Bb4"/>
                         <segue destination="jYk-EB-Cgk" kind="relationship" relationship="viewControllers" id="PqD-vX-OOV"/>
                         <segue destination="8Aj-0g-2vf" kind="relationship" relationship="viewControllers" id="rDk-cN-dEL"/>
