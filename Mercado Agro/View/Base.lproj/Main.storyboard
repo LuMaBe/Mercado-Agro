@@ -7,20 +7,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Item-->
+        <!--Mercado Agro-->
         <scene sceneID="xlW-Cn-1Fa">
             <objects>
                 <tableViewController id="gGp-mG-zny" customClass="SearchBarViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="czM-OG-cxg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="czM-OG-cxg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="Q89-h9-aip">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q89-h9-aip" id="hAb-Vm-n1a">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -33,16 +33,16 @@
                             <outlet property="delegate" destination="gGp-mG-zny" id="7Vs-2e-mZT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Navigation Item" id="dJP-gl-TPU"/>
+                    <navigationItem key="navigationItem" title="Mercado Agro" id="dJP-gl-TPU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSh-Wj-sEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3317" y="141"/>
         </scene>
-        <!--Results Table Controller-->
+        <!--Mercado Agro-->
         <scene sceneID="hDm-Jp-a1X">
             <objects>
-                <tableViewController id="u8k-Bz-uSd" customClass="ResultsTableController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ResultsTableController" id="u8k-Bz-uSd" customClass="ResultsTableController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WRs-2S-TCM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                             <outlet property="delegate" destination="u8k-Bz-uSd" id="Rbm-kt-g6A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bSU-G0-ec9"/>
+                    <navigationItem key="navigationItem" title="Mercado Agro" id="bSU-G0-ec9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1M-8G-Qcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

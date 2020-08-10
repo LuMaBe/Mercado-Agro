@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E96D741124E0E38F00BF214C /* ResultsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D741024E0E38F00BF214C /* ResultsTableController.swift */; };
 		E96D741324E1165700BF214C /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96D741224E1165700BF214C /* TableCell.xib */; };
+		E96D741524E122DD00BF214C /* SearchBarViewController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D741424E122DD00BF214C /* SearchBarViewController+Updating.swift */; };
 		E9CC179A24DDCB5E00E11C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC179924DDCB5E00E11C99 /* AppDelegate.swift */; };
 		E9CC179C24DDCB5E00E11C99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC179B24DDCB5E00E11C99 /* SceneDelegate.swift */; };
 		E9CC17A124DDCB5E00E11C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CC179F24DDCB5E00E11C99 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		E96D741024E0E38F00BF214C /* ResultsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableController.swift; sourceTree = "<group>"; };
 		E96D741224E1165700BF214C /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		E96D741424E122DD00BF214C /* SearchBarViewController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBarViewController+Updating.swift"; sourceTree = "<group>"; };
 		E9CC179624DDCB5E00E11C99 /* Mercado Agro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mercado Agro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC179924DDCB5E00E11C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC179B24DDCB5E00E11C99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				E9DA1D8424DFFD3200E4B950 /* SearchBarViewController.swift */,
+				E96D741424E122DD00BF214C /* SearchBarViewController+Updating.swift */,
 				E96D741024E0E38F00BF214C /* ResultsTableController.swift */,
 				E9DA1D7824DF738D00E4B950 /* FavoritosViewController.swift */,
 				E9DA1D7A24DF73A100E4B950 /* MisVentasViewController.swift */,
@@ -193,6 +196,7 @@
 				E9DA1D7B24DF73A100E4B950 /* MisVentasViewController.swift in Sources */,
 				E9DA1D7F24DF73C500E4B950 /* MasViewController.swift in Sources */,
 				E9CC179A24DDCB5E00E11C99 /* AppDelegate.swift in Sources */,
+				E96D741524E122DD00BF214C /* SearchBarViewController+Updating.swift in Sources */,
 				E9DA1D8A24E0027700E4B950 /* Productos.swift in Sources */,
 				E9CC179C24DDCB5E00E11C99 /* SceneDelegate.swift in Sources */,
 				E9DA1D7D24DF73B100E4B950 /* NotificacionesViewController.swift in Sources */,

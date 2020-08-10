@@ -14,6 +14,8 @@ struct Productos {
         DataProductos(producto: "Tractor Hanomag Stark Agr4 25 Hp", precio: 6450),
         DataProductos(producto: "Tractor John Deere 7810 Americano", precio: 35000),
         DataProductos(producto: "Campo en Rivera", precio: 1000000),
-        DataProductos(producto: "10 Terneros", precio: 80000)
+        DataProductos(producto: "10 Terneros", precio: 80000),
+        DataProductos(producto: "Campo en Canelones", precio: 5000000),
+        DataProductos(producto: "2 Toneladas Soja", precio: 125000)
     ]
 }

@@ -10,9 +10,9 @@ import Foundation
 
 struct DataProductos {
     var producto: String
-    var precio: Int
+    var precio: Double
     
-    init(producto: String, precio: Int) {
+    init(producto: String, precio: Double) {
         self.producto = producto
         self.precio = precio
     }
