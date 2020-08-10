@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Navigation Item-->
         <scene sceneID="xlW-Cn-1Fa">
             <objects>
                 <tableViewController id="gGp-mG-zny" customClass="SearchBarViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,13 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Q89-h9-aip">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="Q89-h9-aip">
                                 <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q89-h9-aip" id="hAb-Vm-n1a">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="u8k-Bz-uSd" kind="show" id="C97-Wu-nHN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,11 +33,40 @@
                             <outlet property="delegate" destination="gGp-mG-zny" id="7Vs-2e-mZT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dJP-gl-TPU"/>
+                    <navigationItem key="navigationItem" title="Navigation Item" id="dJP-gl-TPU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSh-Wj-sEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3203" y="141"/>
+            <point key="canvasLocation" x="-3317" y="141"/>
+        </scene>
+        <!--Results Table Controller-->
+        <scene sceneID="hDm-Jp-a1X">
+            <objects>
+                <tableViewController id="u8k-Bz-uSd" customClass="ResultsTableController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WRs-2S-TCM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultsTableController" id="4YI-Do-9Gu">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4YI-Do-9Gu" id="pJa-uL-y4d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u8k-Bz-uSd" id="2OV-Qi-82F"/>
+                            <outlet property="delegate" destination="u8k-Bz-uSd" id="Rbm-kt-g6A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bSU-G0-ec9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1M-8G-Qcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2435" y="141"/>
         </scene>
         <!--Inicio-->
         <scene sceneID="VGU-g2-ZcL">
@@ -51,7 +83,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZJ-4C-jYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4288" y="141"/>
+            <point key="canvasLocation" x="-4194" y="141"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="nyT-Ad-phs">
@@ -78,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlI-KI-Bfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1646.376811594203" y="140.625"/>
+            <point key="canvasLocation" x="-70" y="-563"/>
         </scene>
         <!--Mis Ventas-->
         <scene sceneID="rAW-kE-YSl">
@@ -105,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gQ-Fo-Mw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894.20289855072474" y="140.625"/>
+            <point key="canvasLocation" x="683" y="-563"/>
         </scene>
         <!--Notificaciones-->
         <scene sceneID="rh5-Ho-8EQ">
@@ -132,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KA-xo-EWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191.30434782608697" y="140.625"/>
+            <point key="canvasLocation" x="1386" y="-563"/>
         </scene>
         <!--Más-->
         <scene sceneID="oGR-BW-T3H">
@@ -159,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1t-rq-XYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550.72463768115949" y="140.625"/>
+            <point key="canvasLocation" x="2128" y="-563"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ek1-kI-zFB">
