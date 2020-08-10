@@ -46,7 +46,7 @@ class SearchBarViewController: UITableViewController, UISearchControllerDelegate
         navigationItem.hidesSearchBarWhenScrolling = false
         
         // Customized SearchBar.
-        navigationItem.titleView?.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        //navigationItem.titleView?.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
             textfield.backgroundColor = .white
             textfield.layer.cornerRadius = 15.0
@@ -117,7 +117,7 @@ class SearchBarViewController: UITableViewController, UISearchControllerDelegate
 
 extension SearchBarViewController: UISearchBarDelegate {
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
     
