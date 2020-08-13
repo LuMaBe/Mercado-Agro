@@ -7,31 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E95CEAA124E1F9E900D417B9 /* InicioRootViewController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95CEAA024E1F9E900D417B9 /* InicioRootViewController+Updating.swift */; };
 		E96D741124E0E38F00BF214C /* ResultsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D741024E0E38F00BF214C /* ResultsTableController.swift */; };
 		E96D741324E1165700BF214C /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E96D741224E1165700BF214C /* TableCell.xib */; };
-		E96D741524E122DD00BF214C /* SearchBarViewController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D741424E122DD00BF214C /* SearchBarViewController+Updating.swift */; };
-		E96D742224E168B500BF214C /* InicioRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D742124E168B500BF214C /* InicioRootViewController.swift */; };
 		E9CC179A24DDCB5E00E11C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC179924DDCB5E00E11C99 /* AppDelegate.swift */; };
 		E9CC179C24DDCB5E00E11C99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC179B24DDCB5E00E11C99 /* SceneDelegate.swift */; };
 		E9CC17A124DDCB5E00E11C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CC179F24DDCB5E00E11C99 /* Main.storyboard */; };
 		E9CC17A324DDCB5F00E11C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CC17A224DDCB5F00E11C99 /* Assets.xcassets */; };
 		E9CC17A624DDCB5F00E11C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CC17A424DDCB5F00E11C99 /* LaunchScreen.storyboard */; };
+		E9D282E024E52D4F00E79A44 /* InicioRootViewController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D282DF24E52D4F00E79A44 /* InicioRootViewController+Updating.swift */; };
+		E9D282E224E530A500E79A44 /* Productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D282E124E530A500E79A44 /* Productos.swift */; };
+		E9D282E424E530DE00E79A44 /* ListaProductos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D282E324E530DE00E79A44 /* ListaProductos.swift */; };
+		E9D282E624E539CB00E79A44 /* ResultsTableController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D282E524E539CB00E79A44 /* ResultsTableController+Updating.swift */; };
 		E9DA1D7924DF738D00E4B950 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1D7824DF738D00E4B950 /* FavoritosViewController.swift */; };
 		E9DA1D7B24DF73A100E4B950 /* MisVentasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1D7A24DF73A100E4B950 /* MisVentasViewController.swift */; };
 		E9DA1D7D24DF73B100E4B950 /* NotificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1D7C24DF73B100E4B950 /* NotificacionesViewController.swift */; };
 		E9DA1D7F24DF73C500E4B950 /* MasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1D7E24DF73C500E4B950 /* MasViewController.swift */; };
-		E9DA1D8524DFFD3200E4B950 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1D8424DFFD3200E4B950 /* SearchBarViewController.swift */; };
-		E9DA1D8724DFFE6700E4B950 /* DataProductos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1D8624DFFE6700E4B950 /* DataProductos.swift */; };
-		E9DA1D8A24E0027700E4B950 /* Productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1D8924E0027700E4B950 /* Productos.swift */; };
+		E9DA1D8524DFFD3200E4B950 /* InicioRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA1D8424DFFD3200E4B950 /* InicioRootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E95CEAA024E1F9E900D417B9 /* InicioRootViewController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InicioRootViewController+Updating.swift"; sourceTree = "<group>"; };
 		E96D741024E0E38F00BF214C /* ResultsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableController.swift; sourceTree = "<group>"; };
 		E96D741224E1165700BF214C /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
-		E96D741424E122DD00BF214C /* SearchBarViewController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBarViewController+Updating.swift"; sourceTree = "<group>"; };
-		E96D742124E168B500BF214C /* InicioRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioRootViewController.swift; sourceTree = "<group>"; };
 		E9CC179624DDCB5E00E11C99 /* Mercado Agro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mercado Agro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC179924DDCB5E00E11C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CC179B24DDCB5E00E11C99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,13 +35,15 @@
 		E9CC17A224DDCB5F00E11C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CC17A524DDCB5F00E11C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9CC17A724DDCB5F00E11C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9D282DF24E52D4F00E79A44 /* InicioRootViewController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InicioRootViewController+Updating.swift"; sourceTree = "<group>"; };
+		E9D282E124E530A500E79A44 /* Productos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productos.swift; sourceTree = "<group>"; };
+		E9D282E324E530DE00E79A44 /* ListaProductos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaProductos.swift; sourceTree = "<group>"; };
+		E9D282E524E539CB00E79A44 /* ResultsTableController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResultsTableController+Updating.swift"; sourceTree = "<group>"; };
 		E9DA1D7824DF738D00E4B950 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
 		E9DA1D7A24DF73A100E4B950 /* MisVentasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisVentasViewController.swift; sourceTree = "<group>"; };
 		E9DA1D7C24DF73B100E4B950 /* NotificacionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacionesViewController.swift; sourceTree = "<group>"; };
 		E9DA1D7E24DF73C500E4B950 /* MasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasViewController.swift; sourceTree = "<group>"; };
-		E9DA1D8424DFFD3200E4B950 /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
-		E9DA1D8624DFFE6700E4B950 /* DataProductos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProductos.swift; sourceTree = "<group>"; };
-		E9DA1D8924E0027700E4B950 /* Productos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Productos.swift; sourceTree = "<group>"; };
+		E9DA1D8424DFFD3200E4B950 /* InicioRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioRootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +60,10 @@
 		E96D741824E167D200BF214C /* Inicio */ = {
 			isa = PBXGroup;
 			children = (
-				E96D742124E168B500BF214C /* InicioRootViewController.swift */,
-				E95CEAA024E1F9E900D417B9 /* InicioRootViewController+Updating.swift */,
-				E9DA1D8424DFFD3200E4B950 /* SearchBarViewController.swift */,
-				E96D741424E122DD00BF214C /* SearchBarViewController+Updating.swift */,
+				E9DA1D8424DFFD3200E4B950 /* InicioRootViewController.swift */,
+				E9D282DF24E52D4F00E79A44 /* InicioRootViewController+Updating.swift */,
 				E96D741024E0E38F00BF214C /* ResultsTableController.swift */,
+				E9D282E524E539CB00E79A44 /* ResultsTableController+Updating.swift */,
 			);
 			path = Inicio;
 			sourceTree = "<group>";
@@ -159,8 +156,8 @@
 		E9DA1D8824DFFE6E00E4B950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E9DA1D8624DFFE6700E4B950 /* DataProductos.swift */,
-				E9DA1D8924E0027700E4B950 /* Productos.swift */,
+				E9D282E124E530A500E79A44 /* Productos.swift */,
+				E9D282E324E530DE00E79A44 /* ListaProductos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,19 +234,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9DA1D8524DFFD3200E4B950 /* SearchBarViewController.swift in Sources */,
+				E9DA1D8524DFFD3200E4B950 /* InicioRootViewController.swift in Sources */,
 				E96D741124E0E38F00BF214C /* ResultsTableController.swift in Sources */,
-				E9DA1D8724DFFE6700E4B950 /* DataProductos.swift in Sources */,
 				E9DA1D7B24DF73A100E4B950 /* MisVentasViewController.swift in Sources */,
+				E9D282E024E52D4F00E79A44 /* InicioRootViewController+Updating.swift in Sources */,
 				E9DA1D7F24DF73C500E4B950 /* MasViewController.swift in Sources */,
-				E95CEAA124E1F9E900D417B9 /* InicioRootViewController+Updating.swift in Sources */,
+				E9D282E424E530DE00E79A44 /* ListaProductos.swift in Sources */,
+				E9D282E224E530A500E79A44 /* Productos.swift in Sources */,
 				E9CC179A24DDCB5E00E11C99 /* AppDelegate.swift in Sources */,
-				E96D741524E122DD00BF214C /* SearchBarViewController+Updating.swift in Sources */,
-				E9DA1D8A24E0027700E4B950 /* Productos.swift in Sources */,
 				E9CC179C24DDCB5E00E11C99 /* SceneDelegate.swift in Sources */,
+				E9D282E624E539CB00E79A44 /* ResultsTableController+Updating.swift in Sources */,
 				E9DA1D7D24DF73B100E4B950 /* NotificacionesViewController.swift in Sources */,
 				E9DA1D7924DF738D00E4B950 /* FavoritosViewController.swift in Sources */,
-				E96D742224E168B500BF214C /* InicioRootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
