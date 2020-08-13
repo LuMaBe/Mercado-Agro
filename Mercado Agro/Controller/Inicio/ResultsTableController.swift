@@ -8,13 +8,8 @@
 
 import UIKit
 
-class ResultsTableController: UITableViewController {
-    
-    var productos = ListaProductos()
-    var filteredProducts = [Productos]()
-    var searching: Bool!
-    let tableViewCellIdentifier = "cellID"
-    
+class ResultsTableController: InicioRootViewController {
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +19,8 @@ class ResultsTableController: UITableViewController {
         
         let nib = UINib(nibName: "TableCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
+        
+        super.transparentNavigationBar()
     }
     
     // MARK: - Table view data source

@@ -13,8 +13,9 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
     // Variable Declarations.
     private var resultsTableController: ResultsTableController!
     var searchController = UISearchController()
-    var productos = ListaProductos() // CHANGE.
-    var filteredProducts = [Productos]() // CHANGE.
+    var productos = ListaProductos()
+    var filteredProducts = [Productos]()
+    var searching: Bool!
     let tableViewCellIdentifier = "cellID"
     
     override func viewDidLoad() {
@@ -84,9 +85,9 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
     
     // Makes the NavigationBar transparent.
     func transparentNavigationBar() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(imageLiteralResourceName: "navigationBackground"), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.view.backgroundColor = UIColor.clear
     }
     

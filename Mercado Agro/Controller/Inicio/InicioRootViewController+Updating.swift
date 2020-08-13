@@ -10,33 +10,24 @@ import UIKit
 
 extension InicioRootViewController: UISearchResultsUpdating {
     
-    private func findMatches(searchString: String) {
-        filteredProducts = []
+    private func findMatches(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        if searchString == "" {
+        if searchText.isEmpty {
             filteredProducts = productos.lista
-            
+            searching = false
         } else {
-            
-            for productos in productos.lista {
-                if productos.titulo.lowercased().contains(searchString.lowercased()) {
-                    filteredProducts.append(productos)
-                }
-            }
+            filteredProducts = productos.lista.filter{ $0.titulo.range(of: searchText, options: [.anchored, .caseInsensitive]) != nil}
+            searching = true
         }
-        
-        DispatchQueue.main.async {
-            
-            self.tableView.reloadData()
-            
-        }
+        tableView.reloadData()
     }
     
     func updateSearchResults(for searchController: UISearchController) {
         
+        let searchText = searchController.searchBar.text!
+        
         searchController.searchResultsController?.view.isHidden = false
-        let searchBar = searchController.searchBar
-        findMatches(searchString: searchBar.text!)
+        findMatches(searchController.searchBar, textDidChange: searchText)
     }
     
 }
