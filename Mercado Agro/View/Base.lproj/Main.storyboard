@@ -3,14 +3,13 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search Bar-->
+        <!--Inicio Root-->
         <scene sceneID="xlW-Cn-1Fa">
             <objects>
-                <tableViewController storyboardIdentifier="SearchBarViewController" title="Search Bar" id="gGp-mG-zny" customClass="InicioRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchBarViewController" title="Search Bar" id="gGp-mG-zny" userLabel="Inicio Root" customClass="InicioRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="czM-OG-cxg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +36,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSh-Wj-sEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3316" y="141"/>
+            <point key="canvasLocation" x="-1117" y="-3104"/>
         </scene>
         <!--Results Table-->
         <scene sceneID="hDm-Jp-a1X">
@@ -66,12 +65,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1M-8G-Qcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2387" y="141"/>
+            <point key="canvasLocation" x="-271" y="-3104"/>
         </scene>
-        <!--Inicio-->
+        <!--NCInicio-->
         <scene sceneID="VGU-g2-ZcL">
             <objects>
-                <navigationController id="DE1-vQ-iKY" sceneMemberID="viewController">
+                <navigationController id="DE1-vQ-iKY" userLabel="NCInicio" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="ngL-7u-mS9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VYF-5j-hdX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -83,115 +82,53 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZJ-4C-jYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4194" y="141"/>
+            <point key="canvasLocation" x="-1994" y="-3104"/>
         </scene>
-        <!--Favoritos-->
-        <scene sceneID="nyT-Ad-phs">
+        <!--Favoritos Root-->
+        <scene sceneID="Lct-5G-QmS">
             <objects>
-                <viewController id="LWA-hs-HXo" customClass="FavoritosViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cED-4t-FVT">
+                <tableViewController id="t3D-LN-RDm" userLabel="Favoritos Root" customClass="FavoritosRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VAf-6h-4mj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="XC8-Ys-VRL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="XC8-Ys-VRL" secondAttribute="bottom" id="Kbb-A2-H54"/>
-                            <constraint firstItem="XC8-Ys-VRL" firstAttribute="top" secondItem="cED-4t-FVT" secondAttribute="top" id="R4z-Dt-eZ8"/>
-                            <constraint firstItem="XC8-Ys-VRL" firstAttribute="leading" secondItem="cED-4t-FVT" secondAttribute="leading" id="et0-9q-Kpd"/>
-                            <constraint firstAttribute="trailing" secondItem="XC8-Ys-VRL" secondAttribute="trailing" id="owv-Qp-hh4"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="a8D-8J-ZNZ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="heart" catalog="system" id="7sU-dA-UVk"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SlI-KI-Bfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="BII-rB-OHO">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BII-rB-OHO" id="Scc-7L-Vmj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="t3D-LN-RDm" id="4SL-vm-pfg"/>
+                            <outlet property="delegate" destination="t3D-LN-RDm" id="42g-9x-Sfz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favoritos" id="TbO-mH-rmS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELk-5h-9hC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="-563"/>
+            <point key="canvasLocation" x="3496" y="-1739"/>
         </scene>
-        <!--Mis Ventas-->
-        <scene sceneID="rAW-kE-YSl">
+        <!--NCFavoritos-->
+        <scene sceneID="vkT-aZ-YyI">
             <objects>
-                <viewController id="jYk-EB-Cgk" customClass="MisVentasViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nUP-tH-R2e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lVI-Ji-h36">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="lVI-Ji-h36" firstAttribute="top" secondItem="nUP-tH-R2e" secondAttribute="top" id="4qN-Sj-eY0"/>
-                            <constraint firstItem="lVI-Ji-h36" firstAttribute="leading" secondItem="nUP-tH-R2e" secondAttribute="leading" id="SUx-n0-0jq"/>
-                            <constraint firstAttribute="bottom" secondItem="lVI-Ji-h36" secondAttribute="bottom" id="gO1-PK-rJv"/>
-                            <constraint firstAttribute="trailing" secondItem="lVI-Ji-h36" secondAttribute="trailing" id="hM1-KA-eIS"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="2aC-Xt-50Q"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Mis Ventas" image="bag" catalog="system" id="8Vh-sq-6dj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1gQ-Fo-Mw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="blv-8Y-kYE" userLabel="NCFavoritos" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="heart" catalog="system" id="W1R-ef-y5G"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KE7-8i-EiF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t3D-LN-RDm" kind="relationship" relationship="rootViewController" id="F46-ZV-M4O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gC-0G-MDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="-563"/>
-        </scene>
-        <!--Notificaciones-->
-        <scene sceneID="rh5-Ho-8EQ">
-            <objects>
-                <viewController id="8Aj-0g-2vf" customClass="NotificacionesViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c5n-TG-9QH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bGQ-R9-cMc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="bGQ-R9-cMc" secondAttribute="bottom" id="FgX-XI-QCW"/>
-                            <constraint firstItem="bGQ-R9-cMc" firstAttribute="top" secondItem="c5n-TG-9QH" secondAttribute="top" id="S1X-Ou-O9q"/>
-                            <constraint firstItem="bGQ-R9-cMc" firstAttribute="leading" secondItem="c5n-TG-9QH" secondAttribute="leading" id="lvl-Gf-UVl"/>
-                            <constraint firstAttribute="trailing" secondItem="bGQ-R9-cMc" secondAttribute="trailing" id="y8W-lW-uqX"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="2LM-vx-dIc"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Notificaciones" image="bell" catalog="system" id="sTq-nj-ofd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0KA-xo-EWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1386" y="-563"/>
-        </scene>
-        <!--Más-->
-        <scene sceneID="oGR-BW-T3H">
-            <objects>
-                <viewController id="NpZ-Tr-EIT" customClass="MasViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aIr-I8-KVo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="mFL-Qy-1dT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="mFL-Qy-1dT" firstAttribute="leading" secondItem="aIr-I8-KVo" secondAttribute="leading" id="56u-vt-mvN"/>
-                            <constraint firstAttribute="bottom" secondItem="mFL-Qy-1dT" secondAttribute="bottom" id="92K-86-MtH"/>
-                            <constraint firstItem="mFL-Qy-1dT" firstAttribute="top" secondItem="aIr-I8-KVo" secondAttribute="top" id="k8x-8S-oQG"/>
-                            <constraint firstAttribute="trailing" secondItem="mFL-Qy-1dT" secondAttribute="trailing" id="rur-ay-TiK"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="h54-gK-CMs"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Más" image="line.horizontal.3" catalog="system" id="mfU-Zd-1Bt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P1t-rq-XYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2128" y="-563"/>
+            <point key="canvasLocation" x="2654" y="-1739"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ek1-kI-zFB">
@@ -204,19 +141,156 @@
                     </tabBar>
                     <connections>
                         <segue destination="DE1-vQ-iKY" kind="relationship" relationship="viewControllers" id="hHD-on-k9L"/>
-                        <segue destination="LWA-hs-HXo" kind="relationship" relationship="viewControllers" id="pfb-Xy-Bb4"/>
-                        <segue destination="jYk-EB-Cgk" kind="relationship" relationship="viewControllers" id="PqD-vX-OOV"/>
-                        <segue destination="8Aj-0g-2vf" kind="relationship" relationship="viewControllers" id="rDk-cN-dEL"/>
-                        <segue destination="NpZ-Tr-EIT" kind="relationship" relationship="viewControllers" id="mhc-rS-1ne"/>
+                        <segue destination="blv-8Y-kYE" kind="relationship" relationship="viewControllers" id="svz-uu-Cx0"/>
+                        <segue destination="RwR-k3-YsQ" kind="relationship" relationship="viewControllers" id="X8m-jd-kwU"/>
+                        <segue destination="Z2o-5H-W2J" kind="relationship" relationship="viewControllers" id="5pR-kO-VVa"/>
+                        <segue destination="Iyu-AF-22v" kind="relationship" relationship="viewControllers" id="tpT-JE-392"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZz-AQ-3or" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1132" y="-744"/>
         </scene>
+        <!--Notificaciones Root-->
+        <scene sceneID="yUc-oi-gn2">
+            <objects>
+                <tableViewController id="BBu-d1-NPV" userLabel="Notificaciones Root" customClass="NotificacionesRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x4q-8L-zV9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="WTa-ny-VwW">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WTa-ny-VwW" id="tiA-5o-Cac">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BBu-d1-NPV" id="655-Xq-fGX"/>
+                            <outlet property="delegate" destination="BBu-d1-NPV" id="6kG-sx-UG0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Notificaciones" id="ea9-wk-bvQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sm6-UG-xHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5065" y="720"/>
+        </scene>
+        <!--Más Root-->
+        <scene sceneID="yN7-jL-YS9">
+            <objects>
+                <tableViewController id="XeK-zH-EQF" userLabel="Más Root" customClass="MasRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yGt-ij-mYr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="CkJ-Rl-oCv">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CkJ-Rl-oCv" id="B1M-Fm-lAP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XeK-zH-EQF" id="M1f-qm-QhT"/>
+                            <outlet property="delegate" destination="XeK-zH-EQF" id="4ij-uU-QSJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="xJ6-eY-CPS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytj-mW-h6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5064" y="-1739"/>
+        </scene>
+        <!--NCMás-->
+        <scene sceneID="ZEj-Tz-Lic">
+            <objects>
+                <navigationController id="Iyu-AF-22v" userLabel="NCMás" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Más" image="line.horizontal.3" catalog="system" id="TJl-Wr-crs"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JID-VZ-c4x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XeK-zH-EQF" kind="relationship" relationship="rootViewController" id="Zb9-Sl-E8J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ye-fX-Gd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5959" y="-1739"/>
+        </scene>
+        <!--NCNotificaciones-->
+        <scene sceneID="9hT-HC-JHr">
+            <objects>
+                <navigationController id="Z2o-5H-W2J" userLabel="NCNotificaciones" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notificaciones" image="bell" catalog="system" id="0GO-yd-Ndh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ch4-2U-V7m">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BBu-d1-NPV" kind="relationship" relationship="rootViewController" id="c9J-vl-1Bn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Pt-rU-E33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5959" y="720"/>
+        </scene>
+        <!--Mis Ventas Root-->
+        <scene sceneID="RpF-SE-vBw">
+            <objects>
+                <tableViewController id="5mQ-L2-M0L" userLabel="Mis Ventas Root" customClass="MisVentasRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uuh-OK-viu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="tn5-Zd-l4T">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tn5-Zd-l4T" id="M6j-gH-LE0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5mQ-L2-M0L" id="Zet-wm-FAn"/>
+                            <outlet property="delegate" destination="5mQ-L2-M0L" id="uf2-93-h1O"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mis Ventas" id="1iD-wf-gaj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5m-4W-MVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3496" y="720"/>
+        </scene>
+        <!--NCMisVentas-->
+        <scene sceneID="EqS-sP-kio">
+            <objects>
+                <navigationController id="RwR-k3-YsQ" userLabel="NCMisVentas" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mis Ventas" image="bag" catalog="system" id="h4l-Tz-6eF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ADx-Mn-n1M">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5mQ-L2-M0L" kind="relationship" relationship="rootViewController" id="uJi-Jm-8YT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NkS-ji-QM4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="720"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="background" width="66.5" height="66.5"/>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="heart" catalog="system" width="128" height="109"/>

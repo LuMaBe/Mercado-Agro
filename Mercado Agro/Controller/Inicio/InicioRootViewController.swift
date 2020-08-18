@@ -16,7 +16,10 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
     var productos = ListaProductos()
     var filteredProducts = [Productos]()
     var searching: Bool!
+    var history: [String]! = []
+    let defaults = UserDefaults.standard
     let tableViewCellIdentifier = "cellID"
+    let historyViewCellIdentifier = "historyCellID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +43,6 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
         
         customizedSearchBar()
         transparentNavigationBar()
-        
         /** Search presents a view controller by applying normal view controller presentation semantics.
          This means that the presentation moves up the view controller hierarchy until it finds the root
          view controller or one that defines a presentation context.
@@ -52,7 +54,7 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
         definesPresentationContext = true
     }
     
-    /* POR SI MÁS ADELANTE PINTA ALGÚN CAMBIO EN EL DISEÑO DE LA SEARCH BAR...
+    /* POR SI MÁS ADELANTE PINTA ALGÚN OTRO CAMBIO EN EL DISEÑO DE LA SEARCH BAR...
      
      Custom Search Icon:
      searchController.searchBar.setImage(UIImage(named: "my_search_icon"), for: UISearchBarIcon.search, state: .normal)

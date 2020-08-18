@@ -10,27 +10,26 @@ import Foundation
 
 struct ListaProductos {
     var lista = [
-        Productos(titulo: "Caballos", precio: 4500),
-        Productos(titulo: "Raciones", precio: 6450),
-        Productos(titulo: "Tractores", precio: 35000),
-        Productos(titulo: "Campos", precio: 125000),
-        Productos(titulo: "Terneros", precio: 30000),
-        Productos(titulo: "Herramientas", precio: 9999),
-        Productos(titulo: "Soja", precio: 125000),
-        Productos(titulo: "Vacunas", precio: 125000),
-        Productos(titulo: "Granos", precio: 125000),
-        Productos(titulo: "Semillas", precio: 125000),
-        Productos(titulo: "Fertilizantes", precio: 125000),
-        Productos(titulo: "Matabicheras", precio: 125000),
-        Productos(titulo: "Ovejas", precio: 125000),
-        Productos(titulo: "Vacas", precio: 125000),
-        Productos(titulo: "Cerdos", precio: 125000),
-        Productos(titulo: "Gallinas", precio: 125000),
-        Productos(titulo: "Inmuebles", precio: 125000),
-        Productos(titulo: "Veterinarios", precio: 125000),
-        Productos(titulo: "Peones", precio: 125000),
-        Productos(titulo: "Agrónomos", precio: 125000),
-        Productos(titulo: "Camioneros", precio: 125000)
-        
+        Productos(titulo: "Caballos"),
+        Productos(titulo: "Raciones"),
+        Productos(titulo: "Tractores"),
+        Productos(titulo: "Campos"),
+        Productos(titulo: "Terneros"),
+        Productos(titulo: "Herramientas"),
+        Productos(titulo: "Soja"),
+        Productos(titulo: "Vacunas"),
+        Productos(titulo: "Granos"),
+        Productos(titulo: "Semillas"),
+        Productos(titulo: "Fertilizantes"),
+        Productos(titulo: "Matabicheras"),
+        Productos(titulo: "Ovejas"),
+        Productos(titulo: "Vacas"),
+        Productos(titulo: "Cerdos"),
+        Productos(titulo: "Gallinas"),
+        Productos(titulo: "Inmuebles"),
+        Productos(titulo: "Veterinarios"),
+        Productos(titulo: "Peones"),
+        Productos(titulo: "Agrónomos"),
+        Productos(titulo: "Camioneros")
     ]
 }

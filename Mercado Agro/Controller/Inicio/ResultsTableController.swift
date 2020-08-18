@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultsTableController: InicioRootViewController {
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,10 +17,9 @@ class ResultsTableController: InicioRootViewController {
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         self.tableView.separatorStyle = .none
         
-        let nib = UINib(nibName: "TableCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
+        let nibHistory = UINib(nibName: "HistoryCell", bundle: nil)
+        tableView.register(nibHistory, forCellReuseIdentifier: historyViewCellIdentifier)
         
-        super.transparentNavigationBar()
     }
     
     // MARK: - Table view data source
@@ -31,10 +30,11 @@ class ResultsTableController: InicioRootViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var rows: Int!
+        var rows = 0
         
         if !searching {
-            rows = productos.lista.count
+            rows = history.count
+            print(history ?? 0, "rows func")
         } else {
             rows = filteredProducts.count
         }
@@ -42,17 +42,43 @@ class ResultsTableController: InicioRootViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let res: UITableViewCell!
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")! as UITableViewCell
+        if !searching {
+            let nibHistory = UINib(nibName: "HistoryCell", bundle: nil)
+            tableView.register(nibHistory, forCellReuseIdentifier: historyViewCellIdentifier)
+            let cell = tableView.dequeueReusableCell(withIdentifier: historyViewCellIdentifier)! as UITableViewCell
+            cell.accessoryType = .detailDisclosureButton
+            cell.textLabel?.text = history[indexPath.row]
+            //cell.accessoryView = UIImageView(image: UIImage(systemName: "multiply"))
+            //cell.accessoryView?.tintColor = UIColor.black
+            cell.backgroundColor = .clear
+            cell.backgroundView = UIView()
+            cell.selectedBackgroundView = UIView()
+            
+            res = cell
+        } else {
+            let nib = UINib(nibName: "TableCell", bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")! as UITableViewCell
+            cell.textLabel?.text = filteredProducts[indexPath.row].titulo
+            cell.backgroundColor = .clear
+            cell.backgroundView = UIView()
+            cell.selectedBackgroundView = UIView()
+            
+            res = cell
+        }
+        return res
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+    // Clears selected history search.
+        history.remove(at: indexPath.row)
+        defaults.removeObject(forKey: "History")
+        defaults.set(history, forKey: "History")
         
-        cell.textLabel?.text = filteredProducts[indexPath.row].titulo
-        
-        // Dejo transparente el fondo de las celdas.
-        cell.backgroundColor = .clear
-        cell.backgroundView = UIView()
-        cell.selectedBackgroundView = UIView()
-        
-        return cell
+        tableView.reloadData()
     }
     
     /*
