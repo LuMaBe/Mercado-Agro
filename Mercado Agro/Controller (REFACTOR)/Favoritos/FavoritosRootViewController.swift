@@ -15,6 +15,8 @@ class FavoritosRootViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         // Table View background.
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         

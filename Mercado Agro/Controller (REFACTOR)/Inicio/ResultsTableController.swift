@@ -5,10 +5,11 @@
 //  Created by Lucas Berger on 8/9/20.
 //  Copyright © 2020 DreamTeam. All rights reserved.
 //
-
 import UIKit
 
 class ResultsTableController: InicioRootViewController {
+    
+    let identifier = "ResultsTableController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +17,6 @@ class ResultsTableController: InicioRootViewController {
         // Table View background.
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
         self.tableView.separatorStyle = .none
-        
-        let nibHistory = UINib(nibName: "HistoryCell", bundle: nil)
-        tableView.register(nibHistory, forCellReuseIdentifier: historyViewCellIdentifier)
         
     }
     
@@ -33,8 +31,8 @@ class ResultsTableController: InicioRootViewController {
         var rows = 0
         
         if !searching {
-            rows = history.count
-            print(history ?? 0, "rows func")
+            rows = History.recentSearches.count
+            print(History.recentSearches ?? 0, "rows func")
         } else {
             rows = filteredProducts.count
         }
@@ -45,13 +43,11 @@ class ResultsTableController: InicioRootViewController {
         let res: UITableViewCell!
         
         if !searching {
-            let nibHistory = UINib(nibName: "HistoryCell", bundle: nil)
-            tableView.register(nibHistory, forCellReuseIdentifier: historyViewCellIdentifier)
-            let cell = tableView.dequeueReusableCell(withIdentifier: historyViewCellIdentifier)! as UITableViewCell
-            cell.accessoryType = .detailDisclosureButton
-            cell.textLabel?.text = history[indexPath.row]
-            //cell.accessoryView = UIImageView(image: UIImage(systemName: "multiply"))
-            //cell.accessoryView?.tintColor = UIColor.black
+            tableView.register(UINib.init(nibName: HistoryTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: HistoryTableViewCell.cellIdentifier)
+            let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.cellIdentifier, for: indexPath) as! HistoryTableViewCell
+            cell.selectionStyle = .none
+            cell.lbTitle.text = History.recentSearches[indexPath.row]
+            tableView.separatorColor = UIColor.clear
             cell.backgroundColor = .clear
             cell.backgroundView = UIView()
             cell.selectedBackgroundView = UIView()
@@ -74,9 +70,9 @@ class ResultsTableController: InicioRootViewController {
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
     // Clears selected history search.
-        history.remove(at: indexPath.row)
-        defaults.removeObject(forKey: "History")
-        defaults.set(history, forKey: "History")
+        History.recentSearches.remove(at: indexPath.row)
+        defaults.removeObject(forKey: UserDefaultKeys.history)
+        defaults.set(History.recentSearches, forKey: UserDefaultKeys.history)
         
         tableView.reloadData()
     }

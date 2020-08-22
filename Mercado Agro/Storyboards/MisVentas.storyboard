@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NtS-2c-lyB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mis Ventas Root-->
+        <scene sceneID="JXg-J2-JV2">
+            <objects>
+                <tableViewController id="F3e-o4-Yy9" userLabel="Mis Ventas Root" customClass="MisVentasRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vVz-jf-okh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="Ido-Yn-E3T">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ido-Yn-E3T" id="zFn-WU-xwR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F3e-o4-Yy9" id="nKP-li-jgA"/>
+                            <outlet property="delegate" destination="F3e-o4-Yy9" id="sV5-XH-yU0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mis Ventas" id="UC3-Qm-EdD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icu-D3-IDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3496" y="720"/>
+        </scene>
+        <!--NCMisVentas-->
+        <scene sceneID="Wrj-kI-FaH">
+            <objects>
+                <navigationController id="NtS-2c-lyB" userLabel="NCMisVentas" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mis Ventas" image="tag" catalog="system" id="qgR-7F-bro"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0je-Mw-PHK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F3e-o4-Yy9" kind="relationship" relationship="rootViewController" id="uRy-sj-cte"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMf-gW-Shi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="720"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tag" catalog="system" width="128" height="116"/>
+    </resources>
+</document>

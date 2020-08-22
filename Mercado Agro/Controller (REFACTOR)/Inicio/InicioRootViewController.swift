@@ -5,7 +5,6 @@
 //  Created by Lucas Berger on 8/9/20.
 //  Copyright © 2020 DreamTeam. All rights reserved.
 //
-
 import UIKit
 
 class InicioRootViewController: UITableViewController, UISearchControllerDelegate, UISearchBarDelegate {
@@ -16,10 +15,8 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
     var productos = ListaProductos()
     var filteredProducts = [Productos]()
     var searching: Bool!
-    var history: [String]! = []
     let defaults = UserDefaults.standard
     let tableViewCellIdentifier = "cellID"
-    let historyViewCellIdentifier = "historyCellID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +27,17 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
         let nib = UINib(nibName: "TableCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
         
-        resultsTableController =
-            self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") as? ResultsTableController
+        
+        resultsTableController = self.storyboard?.instantiateViewController(withIdentifier: "ResultsTableController") as? ResultsTableController
         searchController = UISearchController(searchResultsController: resultsTableController)
         searchController.searchResultsUpdater = (resultsTableController!)
         searchController.delegate = self
         searchController.searchBar.delegate = self
         searchController.searchBar.autocapitalizationType = .none
-        
+
         // This view controller is interested in table view row selections.
         self.tableView.delegate = self
+
         
         customizedSearchBar()
         transparentNavigationBar()
@@ -53,16 +51,6 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
          */
         definesPresentationContext = true
     }
-    
-    /* POR SI MÁS ADELANTE PINTA ALGÚN OTRO CAMBIO EN EL DISEÑO DE LA SEARCH BAR...
-     
-     Custom Search Icon:
-     searchController.searchBar.setImage(UIImage(named: "my_search_icon"), for: UISearchBarIcon.search, state: .normal)
-     
-     Custom Clear Icon:
-     searchController.searchBar.setImage(UIImage(named: "my_search_icon"), for: UISearchBarIcon.clear, state: .normal)
-     
-     */
     
     // Makes the SearchBar customized with my settings.
     func customizedSearchBar() {
@@ -84,6 +72,7 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
         searchController.obscuresBackgroundDuringPresentation = true
         searchController.searchBar.autocapitalizationType = .none
     }
+    
     
     // Makes the NavigationBar transparent.
     func transparentNavigationBar() {
@@ -116,6 +105,4 @@ class InicioRootViewController: UITableViewController, UISearchControllerDelegat
         
         return cell
     }
-    
-    
 }

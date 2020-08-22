@@ -25,13 +25,13 @@ extension InicioRootViewController: UISearchResultsUpdating {
     // History: saves recent searches in UserDefaults.
         let text = searchBar.text!
         print(text)
-        if let checkDefault = defaults.stringArray(forKey: "History") {
-            history = checkDefault
+        if let checkDefault = defaults.stringArray(forKey: UserDefaultKeys.history) {
+            History.recentSearches = checkDefault
         } else {
-            history = []
+            History.recentSearches = []
         }
-        history.append(text)
-        defaults.set(history, forKey: "History")
+        History.recentSearches.append(text)
+        defaults.set(History.recentSearches, forKey: UserDefaultKeys.history)
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -39,10 +39,10 @@ extension InicioRootViewController: UISearchResultsUpdating {
         
         searchController.searchResultsController?.view.isHidden = false
         findMatches(searchController.searchBar, textDidChange: searchText)
-        if let checkDefault = defaults.stringArray(forKey: "History") {
-            history = checkDefault
+        if let checkDefault = defaults.stringArray(forKey: UserDefaultKeys.history) {
+            History.recentSearches = checkDefault
         }
-        print(history ?? 0, "update")
+        print(History.recentSearches ?? 0, "update")
         
         tableView.reloadData()
     }

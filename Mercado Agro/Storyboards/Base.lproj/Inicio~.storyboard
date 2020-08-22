@@ -117,7 +117,7 @@
         <scene sceneID="vkT-aZ-YyI">
             <objects>
                 <navigationController id="blv-8Y-kYE" userLabel="NCFavoritos" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="heart" catalog="system" id="W1R-ef-y5G"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="star" catalog="system" id="W1R-ef-y5G"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KE7-8i-EiF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -140,7 +140,6 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="DE1-vQ-iKY" kind="relationship" relationship="viewControllers" id="hHD-on-k9L"/>
                         <segue destination="blv-8Y-kYE" kind="relationship" relationship="viewControllers" id="svz-uu-Cx0"/>
                         <segue destination="RwR-k3-YsQ" kind="relationship" relationship="viewControllers" id="X8m-jd-kwU"/>
                         <segue destination="Z2o-5H-W2J" kind="relationship" relationship="viewControllers" id="5pR-kO-VVa"/>
@@ -213,7 +212,7 @@
         <scene sceneID="ZEj-Tz-Lic">
             <objects>
                 <navigationController id="Iyu-AF-22v" userLabel="NCMás" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Más" image="line.horizontal.3" catalog="system" id="TJl-Wr-crs"/>
+                    <tabBarItem key="tabBarItem" title="Más" image="plus" catalog="system" id="TJl-Wr-crs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JID-VZ-c4x">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -276,7 +275,7 @@
         <scene sceneID="EqS-sP-kio">
             <objects>
                 <navigationController id="RwR-k3-YsQ" userLabel="NCMisVentas" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mis Ventas" image="bag" catalog="system" id="h4l-Tz-6eF"/>
+                    <tabBarItem key="tabBarItem" title="Mis Ventas" image="tag" catalog="system" id="h4l-Tz-6eF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ADx-Mn-n1M">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -291,10 +290,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bag" catalog="system" width="128" height="128"/>
         <image name="bell" catalog="system" width="128" height="124"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="110"/>
-        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="tag" catalog="system" width="128" height="116"/>
     </resources>
 </document>

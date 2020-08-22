@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eKo-bz-CpD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inicio-->
+        <scene sceneID="8VB-t5-qlr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Inicio" id="sW2-JS-SB4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="GKM-Hd-bgT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ox7-6n-OTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-889" y="413"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="KVc-OT-ocl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favoritos" id="2V5-XU-fNC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="star" catalog="system" id="NY7-hx-2ei"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56z-E2-5gl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="413"/>
+        </scene>
+        <!--MisVentas-->
+        <scene sceneID="Sb7-Qa-Wws">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MisVentas" id="jKt-9g-CJE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mis Ventas" image="tag" catalog="system" id="7U9-7w-yOT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Skx-as-COI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-537" y="413"/>
+        </scene>
+        <!--Notificaciones-->
+        <scene sceneID="ooX-nV-RFj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notificaciones" id="sjU-bl-lwc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notificaciones" image="bell" catalog="system" id="m0X-fZ-qxZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KIj-hb-F0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-315" y="413"/>
+        </scene>
+        <!--Mas-->
+        <scene sceneID="HHO-Pi-0HM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mas" id="bSx-hj-cSe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Más" image="plus" catalog="system" id="I2w-yX-9Lo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cxv-8j-E5B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="413"/>
+        </scene>
+        <!--TabBarController-->
+        <scene sceneID="IUz-5g-Rx9">
+            <objects>
+                <tabBarController title="TabBarController" id="eKo-bz-CpD" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DeT-ID-GRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sW2-JS-SB4" kind="relationship" relationship="viewControllers" id="bxV-KO-1mG"/>
+                        <segue destination="2V5-XU-fNC" kind="relationship" relationship="viewControllers" id="Y6R-Ob-w1S"/>
+                        <segue destination="jKt-9g-CJE" kind="relationship" relationship="viewControllers" id="cOn-CG-gs4"/>
+                        <segue destination="sjU-bl-lwc" kind="relationship" relationship="viewControllers" id="bqp-g7-iNp"/>
+                        <segue destination="bSx-hj-cSe" kind="relationship" relationship="viewControllers" id="nTP-qU-uPn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55N-HD-dNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-509" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="tag" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
