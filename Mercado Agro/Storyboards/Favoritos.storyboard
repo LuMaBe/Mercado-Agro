@@ -9,8 +9,7 @@
         <!--Favoritos Root-->
         <scene sceneID="67i-sb-VEV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N5V-hv-McT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tableViewController id="ozH-RP-uiD" userLabel="Favoritos Root" customClass="FavoritosRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ozH-RP-uiD" userLabel="Favoritos Root" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R0h-6v-DiO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,13 +31,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Favoritos" id="H55-b2-tiL"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N5V-hv-McT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3496" y="-1739"/>
         </scene>
         <!--NCFavoritos-->
         <scene sceneID="nd3-ac-sWd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VWj-x5-2Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="lhw-qF-7OR" userLabel="NCFavoritos" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favoritos" image="star" catalog="system" id="3P6-R7-Ypi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -50,6 +49,7 @@
                         <segue destination="ozH-RP-uiD" kind="relationship" relationship="rootViewController" id="l0o-0j-fvO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWj-x5-2Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2654" y="-1739"/>
         </scene>

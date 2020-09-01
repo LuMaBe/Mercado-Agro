@@ -1,37 +1,39 @@
 //
-//  InicioRootViewController+Updating.swift
+//  HomeScreen+Updating.swift
 //  Mercado Agro
 //
-//  Created by Lucas Berger on 8/13/20.
+//  Created by Lucas Berger on 8/23/20.
 //  Copyright © 2020 DreamTeam. All rights reserved.
 //
+// MARK: HomeScreen's 'searchBar' updating process.
 
 import UIKit
 
-extension InicioRootViewController: UISearchResultsUpdating {
+extension HomeScreen: UISearchResultsUpdating {
     
     private func findMatches(_ searchBar: UISearchBar, textDidChange searchText: String) {
     // Search Algorithm.
         if searchText.isEmpty {
-            searching = false
+            SearchController.searching = false
             tableView.reloadData()
         } else {
-            filteredProducts = productos.lista.filter{ $0.titulo.range(of: searchText, options: [.anchored, .caseInsensitive]) != nil}
-            searching = true
+            FilteredProducts.filteredList = ListaProductos.productos.filter{ $0.titulo.range(of: searchText, options: [.anchored, .caseInsensitive]) != nil}
+            SearchController.searching = true
         }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     // History: saves recent searches in UserDefaults.
-        let text = searchBar.text!
+        let text = searchBar.text!.lowercased()
         print(text)
-        if let checkDefault = defaults.stringArray(forKey: UserDefaultKeys.history) {
+        if let checkDefault = HistoryUserDefaults.defaults.stringArray(forKey: UserDefaultKeys.historyUserDefaults) {
             History.recentSearches = checkDefault
         } else {
             History.recentSearches = []
         }
         History.recentSearches.append(text)
-        defaults.set(History.recentSearches, forKey: UserDefaultKeys.history)
+        HistoryUserDefaults.defaults.set(History.recentSearches, forKey: UserDefaultKeys.historyUserDefaults)
+        searchBar.text = ""
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -39,12 +41,9 @@ extension InicioRootViewController: UISearchResultsUpdating {
         
         searchController.searchResultsController?.view.isHidden = false
         findMatches(searchController.searchBar, textDidChange: searchText)
-        if let checkDefault = defaults.stringArray(forKey: UserDefaultKeys.history) {
+        if let checkDefault = HistoryUserDefaults.defaults.stringArray(forKey: UserDefaultKeys.historyUserDefaults) {
             History.recentSearches = checkDefault
-        }
-        print(History.recentSearches ?? 0, "update")
-        
+        }        
         tableView.reloadData()
     }
-    
 }

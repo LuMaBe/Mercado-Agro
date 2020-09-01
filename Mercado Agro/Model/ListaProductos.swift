@@ -5,11 +5,12 @@
 //  Created by Lucas Berger on 8/13/20.
 //  Copyright © 2020 DreamTeam. All rights reserved.
 //
+// MARK: Product list example. To ensure 'searchBar' works properly.
 
 import Foundation
 
 struct ListaProductos {
-    var lista = [
+    static var productos = [
         Productos(titulo: "Caballos"),
         Productos(titulo: "Raciones"),
         Productos(titulo: "Tractores"),

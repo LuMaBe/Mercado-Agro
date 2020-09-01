@@ -1,40 +1,23 @@
 //
-//  MasRootViewController.swift
+//  TableViewController.swift
 //  Mercado Agro
 //
-//  Created by Lucas Berger on 8/17/20.
+//  Created by Lucas Berger on 8/31/20.
 //  Copyright © 2020 DreamTeam. All rights reserved.
 //
 
 import UIKit
 
-class MasRootViewController: UITableViewController {
-
-    let tableViewCellIdentifier = "cellID"
+class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Table View background.
-        tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-        
-        let nib = UINib(nibName: "TableCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: tableViewCellIdentifier)
 
-        transparentNavigationBar()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    func transparentNavigationBar() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(imageLiteralResourceName: "navigationBackground"), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.view.backgroundColor = UIColor.clear
-        navigationController?.navigationItem.title = "Favoritos"
     }
 
     // MARK: - Table view data source
@@ -49,16 +32,15 @@ class MasRootViewController: UITableViewController {
         return 0
     }
 
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")! as UITableViewCell
-        
-        // Dejo transparente el fondo de las celdas.
-        cell.backgroundColor = .clear
-        cell.backgroundView = UIView()
-        cell.selectedBackgroundView = UIView()
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
+    */
 
     /*
     // Override to support conditional editing of the table view.

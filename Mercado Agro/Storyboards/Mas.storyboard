@@ -9,7 +9,7 @@
         <!--Más Root-->
         <scene sceneID="hEL-Ui-5cl">
             <objects>
-                <tableViewController id="og1-2P-ElX" userLabel="Más Root" customClass="MasRootViewController" customModule="Mercado_Agro" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="og1-2P-ElX" userLabel="Más Root" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kqC-gf-p4o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
