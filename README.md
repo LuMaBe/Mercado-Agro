@@ -1,3 +1,4 @@
+ ![Agribusiness Banner](https://github.com/LuMaBe/Mercado-Agro/blob/master/Documentation/agribusiness.png)
 # Mercado Agro
 ## Personal Project Name:  
 > **_Mercado Agro._**  
